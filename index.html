@@ -30,8 +30,9 @@
     .chart-tooltip{position:absolute;z-index:4;width:min(320px,calc(100% - 16px));min-width:0;max-width:calc(100% - 16px);padding:10px 12px;border:1px solid var(--tooltip-line);border-radius:10px;background:var(--tooltip-bg);color:var(--tooltip-ink);box-shadow:0 10px 26px rgb(2 6 23 / .28);font:500 13px/1.55 'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;pointer-events:none;opacity:0;transform:translate(-50%,-100%) scale(.98);transition:opacity .12s ease,transform .12s ease}
     .chart-tooltip.is-visible{opacity:1;transform:translate(-50%,-100%) scale(1)}.chart-tooltip.is-below{transform:translate(-50%,0) scale(.98)}.chart-tooltip.is-below.is-visible{transform:translate(-50%,0) scale(1)}
     .chart-tooltip__date{padding-bottom:6px;margin-bottom:6px;border-bottom:1px solid var(--tooltip-line);font-weight:700}.chart-tooltip__row{display:grid;grid-template-columns:11px minmax(0,1fr) max-content;gap:7px;align-items:baseline;min-width:0;white-space:normal}.chart-tooltip__swatch{width:10px;height:10px;border:1px solid var(--tooltip-line);border-radius:2px;background:var(--swatch)}.chart-tooltip__label{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chart-tooltip__value{min-width:0;font-weight:700;text-align:right;white-space:nowrap;overflow-wrap:anywhere}.chart-tooltip__row--stacked{grid-template-columns:11px minmax(0,1fr);row-gap:2px}.chart-tooltip__row--stacked .chart-tooltip__swatch{grid-row:1 / span 2;align-self:center}.chart-tooltip__row--stacked .chart-tooltip__value{grid-column:2;text-align:left;white-space:normal}
+    .forecast-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.forecast-card{min-width:0;padding:16px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(135deg,var(--panel),var(--soft))}.forecast-card--empty{display:grid;align-content:center;min-height:206px}.forecast-card__head{display:flex;align-items:center;justify-content:space-between;gap:10px}.forecast-fund{display:flex;align-items:center;gap:8px;font:600 13px 'IBM Plex Mono',monospace}.forecast-direction{font:600 12px 'IBM Plex Mono',monospace;white-space:nowrap}.forecast-direction--up,.forecast-change.up{color:var(--positive)}.forecast-direction--down,.forecast-change.down{color:var(--danger)}.forecast-direction--neutral,.forecast-change.neutral{color:var(--muted)}.forecast-label{margin-top:19px;color:var(--muted);font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;line-height:1.45}.forecast-price{display:block;margin-top:6px;font:600 clamp(23px,3vw,30px)/1.15 'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;letter-spacing:-.055em}.forecast-change{margin-top:8px;font:600 12px 'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}.forecast-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:17px 0 0}.forecast-details>div{min-width:0;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}.forecast-details dt{color:var(--muted);font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase}.forecast-details dd{margin:5px 0 0;font:600 12px/1.35 'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.forecast-meta,.forecast-quality,.forecast-empty__text{margin:13px 0 0;color:var(--muted);font:12px/1.55 'IBM Plex Mono',monospace}.forecast-quality{margin-top:6px}.forecast-empty__title{margin:17px 0 0;font:600 15px Inter,sans-serif}.forecast-risk{margin-top:14px;padding:11px 12px;border-left:3px solid var(--line-strong);border-radius:7px;background:var(--soft);color:var(--muted);font-size:12px;line-height:1.55}.forecast-risk strong{color:var(--ink)}.forecast-method{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.6}.forecast-method summary{color:var(--ink);font-weight:600;cursor:pointer}.forecast-method p{margin:8px 0 0}.forecast-footnote{margin-top:10px;color:var(--muted);font:12px/1.55 'IBM Plex Mono',monospace}
     @media(max-width:840px){.panel-actions{justify-content:flex-start;margin-top:15px}.panel-actions .chart-toggle{justify-content:flex-start;margin-top:0}}
-    @media(max-width:590px){.header-meta{align-items:flex-start}.theme-toggle{min-height:42px}.chart-tooltip{width:calc(100% - 12px);max-width:calc(100% - 12px);padding:9px 10px;font-size:13px}.chart-tooltip__row{grid-template-columns:11px minmax(0,1fr);gap:2px 6px;align-items:start}.chart-tooltip__swatch{grid-row:1 / span 2;align-self:center}.chart-tooltip__label{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}.chart-tooltip__value{grid-column:2;text-align:left;white-space:normal;overflow-wrap:anywhere}.preset,.chart-toggle button{min-height:40px}.fund-toggle{min-height:40px}#fetchBtn{width:100%;min-height:44px}.panel-actions{gap:11px}.chart-control{width:100%}.chart-control .chart-toggle{width:100%}}
+    @media(max-width:590px){.header-meta{align-items:flex-start}.theme-toggle{min-height:42px}.chart-tooltip{width:calc(100% - 12px);max-width:calc(100% - 12px);padding:9px 10px;font-size:13px}.chart-tooltip__row{grid-template-columns:11px minmax(0,1fr);gap:2px 6px;align-items:start}.chart-tooltip__swatch{grid-row:1 / span 2;align-self:center}.chart-tooltip__label{overflow:visible;text-overflow:clip;white-space:normal;overflow-wrap:anywhere}.chart-tooltip__value{grid-column:2;text-align:left;white-space:normal;overflow-wrap:anywhere}.preset,.chart-toggle button{min-height:40px}.fund-toggle{min-height:40px}#fetchBtn{width:100%;min-height:44px}.panel-actions{gap:11px}.chart-control{width:100%}.chart-control .chart-toggle{width:100%}.forecast-grid{grid-template-columns:1fr}.forecast-card{padding:14px}.forecast-price{font-size:27px}.forecast-details{gap:7px}.forecast-details>div{padding:9px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
   </style>
 </head>
@@ -79,6 +80,15 @@
       <div id="priceTableWrap" class="table-wrap"></div>
     </section>
 
+    <section class="panel forecast-panel" aria-labelledby="forecastTitle">
+      <div class="panel-top"><div class="panel-head"><h2 id="forecastTitle">Kısa vadeli fiyat projeksiyonu</h2><p>Seçili fonların tam fiyat geçmişindeki son günlük hareketlerden, bir sonraki iş günü için istatistiksel bir fiyat projeksiyonu üretilir.</p></div></div>
+      <div id="forecastNotice" class="chart-note" aria-live="polite"></div>
+      <div id="forecastGrid" class="forecast-grid" aria-label="Fon bazında kısa vadeli fiyat projeksiyonları"></div>
+      <div class="forecast-risk" role="note"><strong>Önemli:</strong> Bu bölüm FVT tahmini değildir; sitede yüklü fiyat geçmişinden hesaplanır. Gerçekleşmeyebilir ve yatırım tavsiyesi değildir.</div>
+      <details class="forecast-method"><summary>Nasıl hesaplanır?</summary><p>Son en fazla 20 geçerli günlük fiyat değişimi, yakın günlere daha fazla ağırlık verilerek kullanılır. Aykırı hareketler sınırlandırılır, kısa veri geçmişinde sonuç sıfıra yaklaştırılır. Hareket bandı bir olasılık veya garanti değildir.</p></details>
+      <p class="forecast-footnote">Hedef tarihte hafta sonu atlanır; resmî tatiller bu ilk sürümde hesaba katılmaz.</p>
+    </section>
+
     <section class="panel" aria-labelledby="cashflowTitle">
       <div class="panel-top"><div class="panel-head"><h2 id="cashflowTitle">Para giriş / çıkışı</h2><p id="cashflowDescription">Günlük net nakit akışı (TL). Pozitif değer giriş, negatif değer çıkıştır. Birden fazla görünümle yoğun dönemleri veya yön değişimlerini daha net okuyun.</p><div class="readability"><span class="key"></span><span>İpucu: Ayrı fonları kıyaslamak için <strong>Günlük sütun</strong>, birikimli yönü görmek için <strong>Kümülatif</strong> görünümü uygundur.</span></div></div><div class="panel-actions"><div class="chart-control"><span class="control-label">Ölçü</span><div class="chart-toggle" id="cashflowBasis" aria-label="Nakit akışı ölçüsü"><button class="active" data-basis="cashflow" aria-pressed="true">Para giriş / çıkış</button><button data-basis="perInvestor" aria-pressed="false">Yatırımcı başına</button></div></div><div class="chart-control"><span class="control-label">Grafik tipi</span><div class="chart-toggle" id="cashflowMode" aria-label="Nakit akışı grafik tipi"><button class="active" data-mode="grouped" aria-pressed="true">Günlük sütun</button><button data-mode="stacked" aria-pressed="false">Yığılmış</button><button data-mode="line" aria-pressed="false">Çizgi</button><button data-mode="area" aria-pressed="false">Alan</button><button data-mode="cumulative" aria-pressed="false">Kümülatif</button><button data-mode="total" aria-pressed="false">Toplam</button></div></div></div></div>
       <div id="cashflowNotice" class="chart-note" aria-live="polite"></div>
@@ -99,6 +109,7 @@
     const state = { investor:null, price:null, cashflow:null, priceMode:'index', cashflowMode:'grouped', cashflowBasis:'cashflow', data:{funds:[],investor:{},price:{},cashflow:{}} };
     const PRICE_SNAPSHOT_URL = './data/price-history.json';
     let priceSnapshotRequest = null;
+    let priceSnapshot = null;
     let priceSnapshotMeta = null;
     const seriesCache = new Map();
     let loadVersion = 0;
@@ -205,16 +216,22 @@
       catch(error){if(error?.name==='AbortError')throw new Error('İstek zaman aşımına uğradı');throw error;}
       finally{window.clearTimeout(timer);}
     }
-    function normalizePriceRows(rows, code, start, end){
-      return (Array.isArray(rows)?rows:[]).map(row=>{
+    function normalizedPriceHistory(rows, code){
+      const byDate=new Map();
+      (Array.isArray(rows)?rows:[]).forEach(row=>{
         const time=String(row?.time ?? row?.date ?? row?.tarih ?? row?.datetime ?? '').slice(0,10);
         const raw=row?.[code] ?? row?.value ?? row?.price ?? row?.fiyat ?? row?.close ?? row?.nav;
         const value=validNumber(raw);
-        return time&&value!==null?{time,value}:null;
-      }).filter(Boolean).filter(row=>row.time>=start&&row.time<=end).sort((a,b)=>a.time.localeCompare(b.time));
+        if(/^\d{4}-\d{2}-\d{2}$/.test(time)&&value!==null&&value>0)byDate.set(time,{time,value});
+      });
+      return [...byDate.values()].sort((a,b)=>a.time.localeCompare(b.time));
+    }
+    function normalizePriceRows(rows, code, start, end){
+      return normalizedPriceHistory(rows,code).filter(row=>row.time>=start&&row.time<=end);
     }
     async function getPriceSnapshot(){
       if(!priceSnapshotRequest) priceSnapshotRequest=getJSON(PRICE_SNAPSHOT_URL,{cache:'no-cache',timeout:5000}).then(json=>{
+        priceSnapshot=json;
         priceSnapshotMeta={source:json?.source||'TEFAS',updatedAt:json?.updatedAt||null};
         return json;
       }).catch(error=>{priceSnapshotRequest=null;throw error;});
@@ -271,6 +288,37 @@
       state.price=new Chart($('priceChart'),{type:'line',data:{labels,datasets},options:baseOptions(labels,fmt)}); renderPriceTable();
     }
     function renderPriceTable(){ const funds=state.data.funds, results=state.data.price; if(!funds.some(code=>results[code]?.length)){ $('priceTableWrap').innerHTML='<p class="empty">Bu tarih aralığında gösterilecek fiyat verisi yok.</p>';return; } let rows=funds.map(code=>{const s=results[code]||[];if(!s.length)return `<tr><td><span class="dot ${code.toLowerCase()}"></span> ${code}</td><td colspan="4" style="text-align:left;color:var(--muted)">Veri yok</td></tr>`;const first=s[0].value,last=s.at(-1).value,change=(last/first-1)*100,all=s.map(p=>p.value);return `<tr><td><span class="dot ${code.toLowerCase()}"></span> ${code}</td><td>${price(last)}</td><td class="${change>=0?'up':'down'}">${signed(change,v=>number(v,2))}%</td><td>${price(Math.min(...all))}</td><td>${price(Math.max(...all))}</td></tr>`}).join(''); $('priceTableWrap').innerHTML=`<table class="price-table"><thead><tr><th>Fon</th><th>Son fiyat</th><th>Dönem değişimi</th><th>En düşük</th><th>En yüksek</th></tr></thead><tbody>${rows}</tbody></table>`; }
+    function median(values){const sorted=[...values].sort((a,b)=>a-b),mid=Math.floor(sorted.length/2);return sorted.length%2?sorted[mid]:(sorted[mid-1]+sorted[mid])/2;}
+    function clamp(value,min,max){return Math.min(max,Math.max(min,value));}
+    function utcDayDistance(from,to){const [fy,fm,fd]=from.split('-').map(Number),[ty,tm,td]=to.split('-').map(Number);return Math.round((Date.UTC(ty,tm-1,td)-Date.UTC(fy,fm-1,fd))/86400000);}
+    function nextWeekdayISO(iso){const [year,month,day]=iso.split('-').map(Number),date=new Date(Date.UTC(year,month-1,day));do{date.setUTCDate(date.getUTCDate()+1);}while(date.getUTCDay()===0||date.getUTCDay()===6);return date.toISOString().slice(0,10);}
+    function forecastDirection(expected,volatility){const threshold=Math.max(.001,volatility*.25);if(expected>threshold)return {key:'up',icon:'↑',text:'Yukarı eğilim'};if(expected<-threshold)return {key:'down',icon:'↓',text:'Aşağı eğilim'};return {key:'neutral',icon:'→',text:'Yatay / belirsiz'};}
+    function calculateForecast(series){
+      const points=(series||[]).filter(point=>Number.isFinite(point?.value)&&point.value>0).slice(-21);
+      if(points.length<16)return {ok:false,reason:'Bu fon için en az 15 geçerli günlük fiyat değişimi gerekir.'};
+      const returns=[];
+      for(let index=1;index<points.length;index+=1){const previous=points[index-1],current=points[index],days=utcDayDistance(previous.time,current.time);if(days<1||days>3)continue;const change=Math.log(current.value/previous.value);if(Number.isFinite(change))returns.push(change);}
+      if(returns.length<15)return {ok:false,reason:'Kesintisiz yeterli fiyat geçmişi olmadığı için tahmin üretilemedi.'};
+      const recentReturns=returns.slice(-20),center=median(recentReturns),mean=recentReturns.reduce((sum,value)=>sum+value,0)/recentReturns.length,standardDeviation=Math.sqrt(recentReturns.reduce((sum,value)=>sum+(value-mean)**2,0)/recentReturns.length),mad=median(recentReturns.map(value=>Math.abs(value-center))),volatility=Math.max(standardDeviation,1.4826*mad,.002),clipped=recentReturns.map(value=>clamp(value,center-3*volatility,center+3*volatility));
+      const weights=clipped.map((_,index)=>.85**(clipped.length-1-index)),weightTotal=weights.reduce((sum,value)=>sum+value,0),weighted=clipped.reduce((sum,value,index)=>sum+value*weights[index],0)/weightTotal,shrink=Math.min(.45,clipped.length/60),limit=clamp(3*volatility,.005,.05),expected=clamp(weighted*shrink,-limit,limit),latest=points.at(-1),band=Math.max(volatility,.005),predicted=latest.value*Math.exp(expected),lower=latest.value*Math.exp(expected-band),upper=latest.value*Math.exp(expected+band),age=utcDayDistance(latest.time,turkeyISO());
+      if(![predicted,lower,upper].every(Number.isFinite)||lower<=0)return {ok:false,reason:'Hesaplama için uygun fiyat verisi bulunamadı.'};
+      if(age>5)return {ok:false,reason:'Son teyitli fiyat beş günden eski olduğu için tahmin gösterilmiyor.'};
+      return {ok:true,latest,expected,volatility,predicted,lower,upper,returnCount:recentReturns.length,target:nextWeekdayISO(latest.time),stale:age>1};
+    }
+    function forecastSeries(code){const rows=priceSnapshot?.funds?.[code]??priceSnapshot?.data?.[code]??priceSnapshot?.[code];return normalizedPriceHistory(rows,code);}
+    function renderForecast(){
+      const grid=$('forecastGrid'),noticeEl=$('forecastNotice'),funds=state.data.funds||[];
+      if(!funds.length){grid.innerHTML='';noticeEl.textContent='Tahmin için en az bir fon seçin.';return;}
+      if(!priceSnapshot){grid.innerHTML='';noticeEl.textContent='Fiyat geçmişi hazırlanıyor…';return;}
+      const updated=priceSnapshotMeta?.updatedAt?` · kayıt güncellemesi ${new Date(priceSnapshotMeta.updatedAt).toLocaleDateString('tr-TR')}`:'';
+      noticeEl.textContent=`Seçili tarih aralığından bağımsız olarak tam fiyat geçmişindeki son en fazla 20 günlük değişim kullanılır${updated}.`;
+      grid.innerHTML=funds.map(code=>{
+        const model=calculateForecast(forecastSeries(code));
+        if(!model.ok)return `<article class="forecast-card forecast-card--empty"><div class="forecast-fund"><span class="dot ${code.toLowerCase()}"></span>${code}</div><h3 class="forecast-empty__title">Tahmin üretilemedi</h3><p class="forecast-empty__text">${model.reason}</p></article>`;
+        const direction=forecastDirection(model.expected,model.volatility),change=model.expected*100,bandLow=price(model.lower),bandHigh=price(model.upper),stale=model.stale?' · veri güncel olmayabilir':'';
+        return `<article class="forecast-card"><div class="forecast-card__head"><div class="forecast-fund"><span class="dot ${code.toLowerCase()}"></span>${code}</div><span class="forecast-direction forecast-direction--${direction.key}">${direction.icon} ${direction.text}</span></div><div class="forecast-label">Sonraki iş günü için istatistiksel fiyat</div><strong class="forecast-price">${price(model.predicted)}</strong><div class="forecast-change ${direction.key}">Beklenen günlük değişim: ${signed(change,value=>number(value,2))}%</div><dl class="forecast-details"><div><dt>Son fiyat</dt><dd>${price(model.latest.value)}</dd></div><div><dt>Hareket bandı</dt><dd>${bandLow} – ${bandHigh}</dd></div></dl><p class="forecast-meta">Son teyitli: ${dateText(model.latest.time)} · Hedef: ${dateText(model.target)}${stale}</p><p class="forecast-quality">Veri kapsamı: sınırlı (${model.returnCount} günlük değişim)</p></article>`;
+      }).join('');
+    }
     function cumulative(values){let sum=0,started=false,interrupted=false;return values.map(value=>{if(!Number.isFinite(value)){if(started)interrupted=true;return null;}if(interrupted)return null;started=true;sum+=value;return sum;});}
     function normalizeCashflowByInvestor(funds,cashflow,investor){return Object.fromEntries(funds.map(code=>{const people=mapSeries(investor[code]);return [code,(cashflow[code]||[]).map(point=>{const count=people.get(point.time);return {time:point.time,value:Number.isFinite(point.value)&&Number.isFinite(count)&&count>0?point.value/count:null};})];}));}
     function syncCashflowControls(perInvestor){
@@ -300,18 +348,18 @@
     function renderCashflowStats(results=state.data.cashflow,perInvestor=false){
       const funds=state.data.funds;if(!funds.length){$('cashflowStats').innerHTML='';return;}$('cashflowStats').innerHTML=funds.map(code=>{const series=(results[code]||[]).filter(point=>Number.isFinite(point.value));if(!series.length)return `<article class="stat"><div class="stat-name"><span class="dot ${code.toLowerCase()}"></span>${code}</div><div class="stat-value">—</div><div class="stat-detail">Bu aralıkta karşılaştırılabilir veri yok</div></article>`;if(perInvestor){const average=series.reduce((sum,point)=>sum+point.value,0)/series.length,lowest=Math.min(...series.map(point=>point.value)),highest=Math.max(...series.map(point=>point.value));return `<article class="stat"><div class="stat-name"><span class="dot ${code.toLowerCase()}"></span>${code}</div><div class="stat-value ${average>=0?'up':'down'}">${signed(average,moneyPerInvestor)}</div><div class="stat-detail">Ort. günlük · En düşük ${moneyPerInvestor(lowest)} · En yüksek ${moneyPerInvestor(highest)}</div></article>`;}const total=series.reduce((sum,point)=>sum+point.value,0),positive=series.reduce((sum,point)=>sum+(point.value>0?point.value:0),0),negative=series.reduce((sum,point)=>sum+(point.value<0?point.value:0),0);return `<article class="stat"><div class="stat-name"><span class="dot ${code.toLowerCase()}"></span>${code}</div><div class="stat-value ${total>=0?'up':'down'}">${signed(total,money)}</div><div class="stat-detail">Giriş ${money(positive)} · Çıkış ${money(negative)}</div></article>`;}).join('');
     }
-    function renderAll(){ renderInvestor();renderPrice();renderCashflow(); }
+    function renderAll(){ renderInvestor();renderPrice();renderForecast();renderCashflow(); }
     function friendlyError(metric,codes){ if(!codes.length)return ''; const text={investor:'yatırımcı sayısı',price:'fiyat geçmişi',cashflow:'nakit akışı'}[metric]; return `${codes.join(', ')} için ${text} verisi alınamadı.`; }
     async function load(){
       const start=$('startDate').value,end=$('endDate').value,funds=[...document.querySelectorAll('.fund-toggle input:checked')].map(i=>i.dataset.fund),requestVersion=++loadVersion;
       if(!start||!end){status('Başlangıç ve bitiş tarihi seçin.',true);return;} if(start>end){status('Bitiş tarihi başlangıç tarihinden önce olamaz.',true);return;} if(!funds.length){status('En az bir fon seçin.',true);return;}
-      const btn=$('fetchBtn');btn.disabled=true;btn.textContent='Yükleniyor…';status('Fiyat geçmişi hazırlanıyor…');notice('investorNotice','Yatırımcı sayısı getiriliyor…');notice('cashflowNotice','Nakit akışı getiriliyor…');
+      const btn=$('fetchBtn');btn.disabled=true;btn.textContent='Yükleniyor…';status('Fiyat geçmişi hazırlanıyor…');notice('investorNotice','Yatırımcı sayısı getiriliyor…');notice('forecastNotice','Projeksiyon hazırlanıyor…');notice('cashflowNotice','Nakit akışı getiriliyor…');
       const next={funds,investor:{},price:{},cashflow:{}},failed={investor:[],price:[],cashflow:[]};
       const liveJobs=funds.map(async code=>({code,entries:await Promise.allSettled(['investor_count','cashflow'].map(metric=>fetchSeries(code,metric,start,end)))}));
       try{
         const priceEntries=await Promise.allSettled(funds.map(code=>fetchSeries(code,'price',start,end))); if(requestVersion!==loadVersion)return;
         priceEntries.forEach((entry,index)=>{const code=funds[index];if(entry.status==='fulfilled')next.price[code]=entry.value;else{next.price[code]=[];failed.price.push(code);}});
-        state.data=next;renderPrice();const priceUpdate=priceSnapshotMeta?.updatedAt?` · güncelleme ${new Date(priceSnapshotMeta.updatedAt).toLocaleDateString('tr-TR')}`:'';notice('priceNotice',failed.price.length?friendlyError('price',failed.price):`Kaynak: ${priceSnapshotMeta?.source||'TEFAS'}${priceUpdate}`,failed.price.length>0);status(failed.price.length?'Fiyat geçmişi kısmen hazır. Canlı veriler getiriliyor…':'Fiyat geçmişi hazır. Canlı veriler getiriliyor…',failed.price.length>0);
+        state.data=next;renderPrice();renderForecast();const priceUpdate=priceSnapshotMeta?.updatedAt?` · güncelleme ${new Date(priceSnapshotMeta.updatedAt).toLocaleDateString('tr-TR')}`:'';notice('priceNotice',failed.price.length?friendlyError('price',failed.price):`Kaynak: ${priceSnapshotMeta?.source||'TEFAS'}${priceUpdate}`,failed.price.length>0);status(failed.price.length?'Fiyat geçmişi kısmen hazır. Canlı veriler getiriliyor…':'Fiyat geçmişi hazır. Canlı veriler getiriliyor…',failed.price.length>0);
         const liveResults=await Promise.all(liveJobs);if(requestVersion!==loadVersion)return;
         liveResults.forEach(({code,entries})=>entries.forEach((entry,index)=>{const key=['investor','cashflow'][index];if(entry.status==='fulfilled')next[key][code]=entry.value;else{next[key][code]=[];failed[key].push(code);}}));
         state.data=next;FUNDS.forEach(code=>funds.includes(code)?updateTicker(code,next.investor[code]):resetTicker(code));renderInvestor();renderCashflow();
